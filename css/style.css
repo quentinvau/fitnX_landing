@@ -1,3 +1,63 @@
+/* FitnX Custom Colors */
+:root {
+    --color-primary: #00ff88;      /* Electric Green */
+    --color-secondary: #00d4ff;    /* Cyan */
+    --color-dark: #0f1729;         /* Deep Navy */
+    --color-accent: #00b894;       /* Teal */
+    --color-gradient: linear-gradient(135deg, #00d4ff 0%, #00ff88 100%);
+}
+
+/* Override default colors */
+.button.primary {
+    background: var(--color-gradient) !important;
+    border: none !important;
+    color: white !important;
+}
+
+.button.primary:hover {
+    background: linear-gradient(135deg, #00b8e6 0%, #00e674 100%) !important;
+}
+
+/* Header styling */
+#header {
+    background: rgba(15, 23, 41, 0.95) !important;
+}
+
+#logo a {
+    color: var(--color-primary) !important;
+    font-weight: 700 !important;
+    font-size: 1.5em !important;
+}
+
+/* Hero section with logo colors */
+#banner {
+    background: linear-gradient(135deg, var(--color-dark) 0%, #1a2332 100%) !important;
+    color: white !important;
+}
+
+#banner h2 {
+    color: var(--color-primary) !important;
+}
+
+/* Icons with gradient effect */
+.icon.alt.major {
+    background: var(--color-gradient) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+/* CTA section */
+#cta {
+    background: var(--color-dark) !important;
+}
+
+#cta h2 {
+    color: var(--color-primary) !important;
+}
+
+
+
 :root {
     --primary-color: #2563eb;
     --secondary-color: #1e40af;
