@@ -56,6 +56,38 @@
     color: var(--color-primary) !important;
 }
 
+/* Consistent accent colors */
+a {
+    color: var(--color-secondary) !important;
+}
+
+a:hover {
+    color: var(--color-primary) !important;
+}
+
+/* Section headers */
+.major h2 {
+    color: var(--color-dark) !important;
+}
+
+/* Form styling */
+input[type="email"] {
+    border: 2px solid var(--color-secondary) !important;
+}
+
+input[type="email"]:focus {
+    border-color: var(--color-primary) !important;
+}
+
+/* Gradient text effects */
+.gradient-text {
+    background: var(--color-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
 
 
 :root {
