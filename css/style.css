@@ -1,542 +1,338 @@
-/* FitnX Custom Colors */
+/* FitnX Custom Brand Colors */
 :root {
-    --color-primary: #00ff88;      /* Electric Green */
-    --color-secondary: #00d4ff;    /* Cyan */
-    --color-dark: #0f1729;         /* Deep Navy */
-    --color-accent: #00b894;       /* Teal */
-    --color-gradient: linear-gradient(135deg, #00d4ff 0%, #00ff88 100%);
+    --fitnx-electric-green: #00ff88;   /* Primary brand color */
+    --fitnx-cyan: #00d4ff;             /* Secondary brand color */
+    --fitnx-deep-navy: #0f1729;        /* Dark background */
+    --fitnx-teal: #00b894;             /* Accent color */
+    --fitnx-gradient: linear-gradient(135deg, #00d4ff 0%, #00ff88 100%);
+    --fitnx-gradient-hover: linear-gradient(135deg, #00b8e6 0%, #00e674 100%);
 }
 
-/* Override default colors */
-.button.primary {
-    background: var(--color-gradient) !important;
-    border: none !important;
-    color: white !important;
-}
-
-.button.primary:hover {
-    background: linear-gradient(135deg, #00b8e6 0%, #00e674 100%) !important;
-}
-
-/* Header styling */
+/* Header Branding */
 #header {
     background: rgba(15, 23, 41, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 255, 136, 0.1);
 }
 
 #logo a {
-    color: var(--color-primary) !important;
-    font-weight: 700 !important;
-    font-size: 1.5em !important;
-}
-
-/* Hero section with logo colors */
-#banner {
-    background: linear-gradient(135deg, var(--color-dark) 0%, #1a2332 100%) !important;
-    color: white !important;
-}
-
-#banner h2 {
-    color: var(--color-primary) !important;
-}
-
-/* Icons with gradient effect */
-.icon.alt.major {
-    background: var(--color-gradient) !important;
+    background: var(--fitnx-gradient) !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
     background-clip: text !important;
+    font-weight: 800 !important;
+    font-size: 1.8em !important;
+    text-decoration: none !important;
 }
 
-/* CTA section */
-#cta {
-    background: var(--color-dark) !important;
+/* Navigation */
+#nav ul li a {
+    color: rgba(255, 255, 255, 0.8) !important;
+    transition: color 0.3s ease !important;
 }
 
-#cta h2 {
-    color: var(--color-primary) !important;
+#nav ul li a:hover {
+    color: var(--fitnx-electric-green) !important;
 }
 
-/* Consistent accent colors */
-a {
-    color: var(--color-secondary) !important;
+/* Primary Buttons */
+.button.primary {
+    background: var(--fitnx-gradient) !important;
+    border: none !important;
+    color: white !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3) !important;
 }
 
-a:hover {
-    color: var(--color-primary) !important;
+.button.primary:hover {
+    background: var(--fitnx-gradient-hover) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(0, 255, 136, 0.4) !important;
 }
 
-/* Section headers */
-.major h2 {
-    color: var(--color-dark) !important;
-}
-
-/* Form styling */
-input[type="email"] {
-    border: 2px solid var(--color-secondary) !important;
-}
-
-input[type="email"]:focus {
-    border-color: var(--color-primary) !important;
-}
-
-/* Gradient text effects */
-.gradient-text {
-    background: var(--color-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-
-
-
-:root {
-    --primary-color: #2563eb;
-    --secondary-color: #1e40af;
-    --accent-color: #f59e0b;
-    --success-color: #059669;
-    --text-dark: #1f2937;
-    --text-light: #6b7280;
-    --background: #ffffff;
-    --section-bg: #f8fafc;
-    --border-color: #e5e7eb;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    line-height: 1.6;
-    color: var(--text-dark);
-    overflow-x: hidden;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Hero Section */
-.hero {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    color: white;
-    text-align: center;
-    padding: 100px 0;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+/* Banner/Hero Section */
+#banner {
+    background: linear-gradient(135deg, var(--fitnx-deep-navy) 0%, #1a2332 100%) !important;
+    color: white !important;
     position: relative;
     overflow: hidden;
 }
 
-.hero::before {
+#banner::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
-    animation: float 20s ease-in-out infinite;
-}
-
-.hero .container {
-    position: relative;
+    background: radial-gradient(circle at 20% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 50%), 
+                radial-gradient(circle at 80% 20%, rgba(0, 255, 136, 0.1) 0%, transparent 50%);
     z-index: 1;
 }
 
-.hero h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 800;
-    margin-bottom: 1.5rem;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
+#banner .content {
+    position: relative;
+    z-index: 2;
 }
 
-.hero h2 {
-    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-    font-weight: 400;
-    margin-bottom: 3rem;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    opacity: 0.95;
-    line-height: 1.5;
+#banner h2 {
+    background: var(--fitnx-gradient) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    font-weight: 800 !important;
+    font-size: 3.5em !important;
+    line-height: 1.1 !important;
+    margin-bottom: 1rem !important;
 }
 
-.value-props {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-bottom: 3rem;
-    flex-wrap: wrap;
+#banner p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 1.4em !important;
+    font-weight: 300 !important;
+    margin-bottom: 2rem !important;
 }
 
-.value-props span {
-    background: rgba(255, 255, 255, 0.15);
-    padding: 0.75rem 1.5rem;
-    border-radius: 30px;
-    font-weight: 500;
-    font-size: 0.95rem;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+/* Section Headers */
+.major h2, 
+section header h2 {
+    background: linear-gradient(135deg, var(--fitnx-deep-navy) 0%, #2a3441 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    font-weight: 700 !important;
 }
 
-.cta-primary {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+/* Icons with Brand Colors */
+.icon.alt.major {
+    background: var(--fitnx-gradient) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
 }
 
-.cta-primary input {
-    flex: 1;
-    padding: 1rem 1.5rem;
-    border: none;
-    border-radius: 12px;
-    font-size: 1rem;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+.icon.major {
+    color: var(--fitnx-electric-green) !important;
 }
 
-.cta-primary input:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.3);
+/* Feature sections */
+#one {
+    background: #f8fafc !important;
 }
 
-.cta-primary button {
-    background: var(--accent-color);
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 12px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 1rem;
-    white-space: nowrap;
+#one .icon.alt.major {
+    font-size: 3em !important;
+    margin-bottom: 1rem !important;
 }
 
-.cta-primary button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+/* Why FitnX section */
+#two {
+    background: var(--fitnx-deep-navy) !important;
+    color: white !important;
 }
 
-.social-proof {
-    opacity: 0.9;
-    font-size: 0.95rem;
-    font-style: italic;
+#two h2 {
+    background: var(--fitnx-gradient) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
 }
 
-/* Problem Solution Section */
-.problem-solution {
-    padding: 80px 0;
-    background: var(--section-bg);
+#two h3 {
+    color: var(--fitnx-electric-green) !important;
 }
 
-.problem-solution h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: var(--text-dark);
+#two .icon.major {
+    font-size: 2.5em !important;
+    margin-bottom: 1rem !important;
 }
 
-.comparison-grid {
+#two .features {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
     margin-top: 3rem;
 }
 
-.problem, .solution {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-}
-
-.problem h3 {
-    color: #dc2626;
-    margin-bottom: 1.5rem;
-    font-size: 1.3rem;
-}
-
-.solution h3 {
-    color: var(--success-color);
-    margin-bottom: 1.5rem;
-    font-size: 1.3rem;
-}
-
-.problem ul, .solution ul {
-    list-style: none;
-}
-
-.problem li, .solution li {
-    padding: 0.75rem 0;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.problem li:last-child, .solution li:last-child {
-    border-bottom: none;
-}
-
-/* Features Section */
-.features {
-    padding: 80px 0;
-}
-
-.features h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: var(--text-dark);
-}
-
-.section-subtitle {
-    text-align: center;
-    font-size: 1.2rem;
-    color: var(--text-light);
-    margin-bottom: 3rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.feature-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2.5rem;
-    margin-top: 3rem;
-}
-
-.feature {
-    text-align: center;
-    padding: 2rem;
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.feature:hover {
-    transform: translateY(-5px);
-}
-
-.feature-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.feature h4 {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-    color: var(--text-dark);
-}
-
-.feature p {
-    color: var(--text-light);
-    line-height: 1.7;
-}
-
-/* Social Proof Section */
-.social-proof {
-    padding: 80px 0;
-    background: var(--section-bg);
-}
-
-.social-proof h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: var(--text-dark);
-}
-
-.audience-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
-}
-
-.audience {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+#two .features section {
     text-align: center;
 }
 
-.audience h4 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
+#two ul.alt li {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    padding: 0.75rem 0 !important;
 }
 
-.audience p {
-    color: var(--text-light);
-    margin-bottom: 1.5rem;
-    font-style: italic;
-    line-height: 1.6;
+/* Third section */
+#three {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%) !important;
 }
 
-.audience-tag {
-    display: inline-block;
-    background: var(--primary-color);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 500;
+#three .icon.alt.major {
+    color: var(--fitnx-teal) !important;
 }
 
-/* Beta Signup Section */
-.beta-signup {
-    padding: 80px 0;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    color: white;
-    text-align: center;
+/* CTA Section */
+#cta {
+    background: linear-gradient(135deg, var(--fitnx-deep-navy) 0%, #1a2332 100%) !important;
+    color: white !important;
+    position: relative;
+    overflow: hidden;
 }
 
-.beta-signup h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+#cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 70%, rgba(0, 255, 136, 0.1) 0%, transparent 50%), 
+                radial-gradient(circle at 70% 30%, rgba(0, 212, 255, 0.1) 0%, transparent 50%);
+    z-index: 1;
 }
 
-.beta-signup > p {
-    font-size: 1.2rem;
-    margin-bottom: 3rem;
-    opacity: 0.9;
+#cta .container {
+    position: relative;
+    z-index: 2;
 }
 
-.signup-form {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 3rem;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+#cta h2 {
+    background: var(--fitnx-gradient) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    font-size: 3em !important;
+    margin-bottom: 1rem !important;
 }
 
-.signup-form input {
-    flex: 1;
-    padding: 1rem 1.5rem;
-    border: none;
-    border-radius: 12px;
-    font-size: 1rem;
-    background: rgba(255, 255, 255, 0.95);
+#cta p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 1.3em !important;
+    margin-bottom: 2rem !important;
 }
 
-.signup-form button {
-    background: var(--accent-color);
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 12px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    white-space: nowrap;
+/* Form Styling */
+input[type="email"] {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border: 2px solid var(--fitnx-cyan) !important;
+    color: var(--fitnx-deep-navy) !important;
+    font-weight: 500 !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
 }
 
-.signup-form button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+input[type="email"]:focus {
+    border-color: var(--fitnx-electric-green) !important;
+    box-shadow: 0 0 0 3px rgba(0, 255, 136, 0.2) !important;
+    outline: none !important;
 }
 
-.benefits {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.benefit {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 1rem;
-    border-radius: 12px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Success Message */
-.success-message {
-    background: var(--success-color);
-    color: white;
-    padding: 2rem;
-    border-radius: 12px;
-    text-align: center;
-}
-
-.success-message h3 {
-    margin-bottom: 0.5rem;
+/* Benefits styling */
+.benefits p {
+    background: rgba(0, 255, 136, 0.1) !important;
+    border: 1px solid rgba(0, 255, 136, 0.2) !important;
+    padding: 1rem 2rem !important;
+    border-radius: 25px !important;
+    margin-top: 2rem !important;
+    font-size: 1.1em !important;
+    backdrop-filter: blur(10px) !important;
 }
 
 /* Footer */
-footer {
-    background: var(--text-dark);
-    color: white;
-    text-align: center;
-    padding: 2rem 0;
+#footer {
+    background: var(--fitnx-deep-navy) !important;
+    border-top: 1px solid rgba(0, 255, 136, 0.2) !important;
 }
 
-/* Animations */
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
+#footer .icons li a {
+    color: rgba(255, 255, 255, 0.6) !important;
+    transition: color 0.3s ease !important;
 }
 
-/* Responsive Design */
+#footer .icons li a:hover {
+    color: var(--fitnx-electric-green) !important;
+}
+
+/* Links */
+a {
+    color: var(--fitnx-cyan) !important;
+    text-decoration: none !important;
+    transition: color 0.3s ease !important;
+}
+
+a:hover {
+    color: var(--fitnx-electric-green) !important;
+}
+
+/* Responsive Design Enhancements */
 @media (max-width: 768px) {
-    .hero {
-        padding: 60px 0;
-        min-height: 90vh;
+    #banner h2 {
+        font-size: 2.5em !important;
     }
     
-    .cta-primary, .signup-form {
-        flex-direction: column;
+    #logo a {
+        font-size: 1.5em !important;
     }
     
-    .value-props {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .comparison-grid, .feature-grid, .audience-cards {
+    #two .features {
         grid-template-columns: 1fr;
-    }
-    
-    .benefits {
-        grid-template-columns: 1fr;
-    }
-    
-    section {
-        padding: 60px 0;
+        gap: 2rem;
     }
 }
 
 @media (max-width: 480px) {
-    .container {
-        padding: 0 15px;
+    #banner h2 {
+        font-size: 2em !important;
     }
     
-    .hero h1 {
-        font-size: 2rem;
+    #banner p {
+        font-size: 1.2em !important;
     }
-    
-    .hero h2 {
-        font-size: 1rem;
-    }
-    
-    .features h2, .social-proof h2, .beta-signup h2 {
-        font-size: 2rem;
-    }
+}
+
+/* Success Message Styling */
+.success-message {
+    background: linear-gradient(135deg, var(--fitnx-electric-green) 0%, var(--fitnx-teal) 100%) !important;
+    color: white !important;
+    padding: 2rem !important;
+    border-radius: 12px !important;
+    text-align: center !important;
+    box-shadow: 0 8px 25px rgba(0, 255, 136, 0.3) !important;
+}
+
+.success-message h3 {
+    margin-bottom: 0.5rem !important;
+    font-size: 1.5em !important;
+}
+
+/* Additional Brand Touches */
+.goto-next {
+    color: var(--fitnx-electric-green) !important;
+}
+
+.goto-next:hover {
+    color: var(--fitnx-cyan) !important;
+}
+
+/* Scrollbar Styling (Webkit browsers) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--fitnx-deep-navy);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--fitnx-gradient);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--fitnx-gradient-hover);
 }
